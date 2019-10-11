@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>html 코드 삽입</title>
+        <style>
+        body{background:bisque;  }
+        table{padding:20px;color:brown;margin:10px;}
+        
+        </style>
+         <script>
+             function input(){
+                var value=(document.getElementById("put1").value);
+                var value2=parseInt(document.getElementById("put2").value);
+                var temp=value+value2;
+
+                document.getElementById("out").value = temp;
+             }
+         
+            
+           </script>
+    </head>
+    <body>
+       <!-- <p onmouseover="document.body.style.color='salmon'" onmouseout="document.body.style.color='purple'">문자열 내에 문자열 삽입</p>
+    <script>
+         document.write("너는 누구냐");
+     </script>
+         -->
+       
+         <h2> 자바스크립트에서 html요소에 접근하는 법</h2>
+         <table>
+             <tr>
+                 <td>첫번쨰 정수 <input type="text" id="put1"> </td>
+            </tr>
+            <tr>
+                 <td>두번째 정수 <input type="text" id="put2"></td>
+            </tr>
+            <tr>
+                 <td> 총합 <input type="text"  id="out"></td>
+            </tr>
+            <tr>
+                 <td> <input type="button" value="계산" onclick="input()"></td>
+                 <td> <input type="button" value="취소" ></td>
+            </tr>
+           
+         </table>
+
+        
+    </body>
+</html>

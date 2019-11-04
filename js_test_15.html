@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>a</title>
+    </head>
+    <body>
+        <h2>계좌</h2>
+        <hr>
+        <script>
+       // var account = { 'owner': kim, 'code': 111, balance(a){return a;}};
+        var a = new Object;
+        a.owner ='kim';
+        a.code = 111;
+        a.balance=3500;
+        a.deposit = deposit;
+        a.withdraw =withdraw;
+        function deposit(money) { this.balance+=money; return this.balance;  }
+        function withdraw(money) {
+            this.balance-= money;
+            return this.balance;
+        }
+       var reslut= a.deposit(100);
+       console.log(reslut);
+       // for (var name in a){
+        //    alert(a[name]);
+        //}
+
+        </script>
+    </body>
+</html>

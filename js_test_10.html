@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            as
+        </title>
+   
+    </head>
+    <body>
+        <h2>랜덤 정답</h2>
+        <hr>
+        <script>
+            var num=0;
+            var rand = (Math.random())*100+1;
+            var rand1= Math.floor(rand);
+            
+            function randomInt(){
+                return Math.floor(Math.random()*9)+1;
+            }
+            var i =randomInt();
+            var j =randomInt();
+            var num= prompt(i+"*"+j +"값은 얼마?",0);
+            if(i*j==num){
+                 document.write("정답입니다.");
+            }else{
+                document.write("오답입니다.");
+            }
+        </script>
+    
+</body>
+</html>

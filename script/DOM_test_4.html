@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        <h2>innerHTML 활용 : 아래 글자에 클릭하면 이미지가 나옵니다.</h2>
+        <hr>
+        <p style="color:blue" id="my">여기에 </p>
+        <span id="ch" style="color:red" onclick="img_add()">클릭하세요</span>
+        
+        <script>
+        function img_add(){
+            var span = document.getElementById("ch");
+            var p = document.getElementById("my");
+            p.innerHTML="나의";
+            span.style.color="blue";
+            span.innerHTML="<img src='img/4.jpg'> 니니즈"; 
+        }
+        </script>
+    </body>
+
+</html>

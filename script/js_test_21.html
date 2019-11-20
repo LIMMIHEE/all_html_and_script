@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+        var Book =new Object();
+        Book['title']='첫사랑은 블루';
+        Book['author']='뭐더라';
+        Book['price']=10000;
+
+        var max =new Object();
+        max['price']='a';
+        var sh=0;
+        
+        //var Boook = new Array(2);
+        var Boook = new Array(2);
+        for(var i=0; i<Boook.length; i++){
+            var Book =new Object();
+            var input= prompt(",으로 값을 나누어 입력하세요. [ex 제목,작가,가격]");
+            var info=input.split(',');
+            if(info[3]>max[0]){
+                max[0]=info[3];
+                sh=i;
+            }
+            // 이떄 info는 배열이 된다
+            Book.title=info[0];
+            Book.author=info[1];
+            Book.price=info[2];
+            Boook[i]=Book;
+        }
+        for(var i=0; i<Boook.length; i++){
+            document.write(Boook[i].title+"<br>");
+            document.write(Boook[i].author+"<br>");
+            document.write(Boook[i].price+"<br>");
+        }
+
+        document.write("최대값은 "+max[0]+"이고 "+(sh+1)+"위치에 있습니다.");
+
+
+        </script>
+    </body>
+</html>

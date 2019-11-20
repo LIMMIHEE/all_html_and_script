@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            as
+        </title>
+   
+    </head>
+    <body>
+        <h2>오전이면 오렌지 오ㅠㅜ면 보라</h2>
+        <hr>
+        <script>
+            var date1 = new Date();
+            document.write("현재시간 : "+ date1.getHours()+"시"+date1.getMinutes()+"분"+date1.getSeconds()+"초");
+            a=date1.getHours();
+            if(a>11){
+                document.body.style.backgroundColor = "purple";
+            }else{
+                document.body.style.backgroundColor = "orange";
+            }
+        </script>
+    </body>
+</html>

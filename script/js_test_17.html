@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        <script>
+            var car={'model': 'v7','speed':120,'color':'blue', breake :function (){}, accel: function () {} }  
+            function Car(model,speed,color){
+                this.model = model;
+                this.speed = speed;
+                this.color = color;
+                this. breake =breake;  
+                this.accel =accel;
+            }
+
+            var car2 = new Car("a4",50,"black");
+            
+            function breake(){this.speed-=20;}
+            function accel() {this.speed+=20;} 
+            document.write(car.speed+"<br>");
+            document.write(car2.speed);
+
+        </script>
+    </body>
+</html>

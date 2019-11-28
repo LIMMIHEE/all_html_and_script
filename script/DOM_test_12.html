@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+        <style>
+            span{ visibility: hidden; color:brown;}
+        </style>
+        <script>
+        function hide_ (){
+            var span = document.getElementsByTagName("span")
+            for(var i=0; i<span.length; i++){
+                    var st =Window.getComputedStyle(span[i]);
+                    var visi = st.getPropertyValue('visibility');
+                if(visi=="hidden"){
+                    for(var i=0; i<span.length; i++){
+                        span[i].style.visibility="visible";
+                    }
+                }else{
+                    for(var i=0; i<span.length; i++){
+                        span.style.visibility="hidden";
+                    }
+                }
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <h3> 다음 빈 곳에 숨은 단어는?</h3>
+        <button onclick="hide_()">show/hide</button>
+        <hr>
+        <ul>
+            <li> 뭉쳐야 ( <span>찬다 </span> )</li>
+            <li> 동백꽃 ( <span>강하늘 </span> )</li>
+            <li> 응답하라 ( <span>1994 </span> )</li>
+        </ul>
+    </body>
+</html>

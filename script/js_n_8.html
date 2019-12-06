@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head><title></title>
+        <script>
+        function ch(){
+            var chk_r = document.getElementsByName('animal');
+            var i;
+            for(var i =0; i<chk_r.length; i++){
+                if(chk_r[i].checked ==true){
+                   console.log(chk_r[i].value);
+                }
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <h3>버튼을 클릭하면 서택된 라디오 버튼의 value를 출력합니다.</h3>
+        <hr>
+        <input type="radio" name="animal" value="개">개
+        <input type="radio" name="animal" value="소">소
+        <input type="radio" name="animal" value="말" >말
+        <input type="button" value="선택" onclick="ch(this)">
+    </body>
+</html>

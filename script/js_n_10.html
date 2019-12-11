@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>a</title>
+        <script>
+            function ch(){
+                var chk_r = document.getElementById("sel");
+                var img_ =document.getElementById("ch_p");
+                img_.src=chk_r.options[chk_r.selectedIndex].value;
+
+            }
+        </script>
+    </head>
+    <body>
+        <h2>과일 출력</h2>
+        <hr>
+        과일을 선택하면 이미지가 출력
+        <select name="imgp" id="sel" onchange="ch()">
+            <option value="img/Banana.jpg">바나나</option>
+            <option value="img/apple.jpg">사과</option>
+            <option value="img/git.png">깃</option>
+        </select>
+        <br>
+        <img src="../img/Banana.jpg" id="ch_p">
+    </body>
+</html>

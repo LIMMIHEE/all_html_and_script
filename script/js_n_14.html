@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+        function Keyevent(){
+            if(event.keyCode==13){
+                var i = document.getElementById("put_t").value;
+                document.getElementById("print_t").value =eval(i);
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <h2>계산기 만들기</h2>
+        <hr>
+        수식을 입력하고 enter하세요.
+        <br>
+        식  <input type="text" id="put_t" onkeypress="javascript:Keyevent();"><br>
+        값  <input type="text" id="print_t">
+    </body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>keyEvent</title>
+    <script>
+        function keyevent(obj) {
+            console.log("키값:" + event.keyCode);
+            switch (event.keyCode) {
+                case 37:
+                    document.body.style.backgroundColor = '#3948';
+                    break;
+                case 38:
+                    document.body.style.backgroundColor = '#338';
+                    break;
+                case 39:
+                    document.body.style.backgroundColor = '#3106';
+                    break;
+                case 40:
+                    document.body.style.backgroundColor = '#279';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    키 이벤트 예제 <input type="text" onkeydown="javascript:keyevent(this)" ;>
+</body>
+
+</html>

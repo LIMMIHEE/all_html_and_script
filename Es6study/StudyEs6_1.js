@@ -17,7 +17,7 @@ home();
  */
 
 // let ( 1강 )
-
+//////////////////////////////////////////////////
 /*
 var list = document.querySelectorAll("li");
 for(let i=0; i<list.length;i++){
@@ -30,7 +30,7 @@ for(let i=0; i<list.length;i++){
 }
 */
 // let과 closure ( 2강 )
-
+//////////////////////////////////////////////////
 
 /*
 function home(){
@@ -49,6 +49,7 @@ function home(){
 home();
  */
 // 3강
+//////////////////////////////////////////////////
 
 /*
 function home(){
@@ -67,9 +68,9 @@ home();
 
  */
 //4강
+//////////////////////////////////////////////////
 
-
-
+/*
 
 let str="hello world! ^^*~~";
 //hello로 시작하는 지 안하는 지 알려면 어떤 걸 해야할까?
@@ -77,5 +78,82 @@ let matcher = "hello";
 console.log(str.startsWith(matcher));//시작이 일치하는지
 console.log(str.endsWith(matcher));// 끝이 일치하는지
 console.log(str.includes("world"));//해당 글자가 들어있느냐
-
+ */
 //5강
+//////////////////////////////////////////////////
+
+/*
+var data = [1,2,undefined, NaN, null,""];
+data.forEach(function(value){
+    console.log("V:"+value);
+})
+Array.prototype.getIndex = function () {};
+for(let value in data){
+    console.log(data[value]);
+}
+for(let value of data){
+    console.log(value);
+}
+
+var str = "hello world!!!!";
+for(let value of str){
+    console.log(value);
+}
+
+*/
+//6강
+//////////////////////////////////////////////////
+
+
+/*
+//spread operator , 펼침 연산자
+
+let pre = ["apple","orange",100];
+let newData = [...pre];
+// []는 배열을 뜻함 , ...pre는 펼침을 뜻함? * 점 3개 필수+펼칠 배열 이름
+console.log(pre,newData);
+//console.log(pre===newData); 참조가 같냐고 불러보는 기호 ===
+*/
+//7강
+
+//////////////////////////////////////////////////
+
+/*
+let pre = [100,200,"hello",null];
+let newData = [0,1,2,3,...pre,4];
+
+console.log(newData);
+
+function sum(a,b,c){
+    return a+b+c;
+}
+let Pn = [100,200,300];
+console.log(sum.apply(null, Pn)); // apply 는 두번째를 널로 받음
+console.log("result -> "+sum(...Pn));
+*/
+//8강
+
+//////////////////////////////////////////////////
+
+
+//ES2015 from method
+function addMark(){
+    //let newData= [];
+    /*
+    for(let i=0; i<arguments.length; i++){ //arguments = 객체
+        newData.push(arguments[i]+"!");
+    }
+    */
+   let newArray = Array.from(arguments);
+   //let newData=arguments.map(function(value){ //arguments는 배열이 아니기 때문에 map 사용불가. 근데 모양은 배열임 ( 가짜배열 )
+        // 가짜를 진짜로 만드는 방법 
+    let newData=newArray.map(function(value){
+       return value+"!";
+   });
+    console.log(newData);
+
+}
+addMark(1,2,3,4,5);
+
+
+

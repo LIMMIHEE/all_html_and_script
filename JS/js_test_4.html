@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            asd
+        </title>
+        <script></script>
+    </head>
+    <body><h2> 월화수목 금토일</h2>
+        <hr>
+        <script>
+            // funtion fruits(){
+            //     var fruits= new Array;
+            //     fruits[0]='과일이이잉';
+
+            //     document.write(fruits[0]);
+            // }
+
+            var uid = prompt("월화수목금토일","");
+            if(uid=="월" & uid=="화"& uid=="수"& uid=="목"& uid=="금"){
+                document.write(uid+"은 출근일");
+            }else if(uid=="토" & uid=="일"){
+                document.write(uid+"은 주말출근일");
+            }else{
+                document.write("ㅡ ㅡ");
+            }
+        </script>
+
+        <h2>암호를 입력하라!</h2>
+        <hr>
+        <script>
+            while(true){
+                var uid = prompt("암호를 입력하세요!","");
+                if(uid=="pupil"){
+                    document.write("통과!");
+                    break;
+                }
+            }
+               
+        </script>
+   
+        <h2>document.write() 로 만들기!</h2>
+         <hr>
+        <script>
+            document.write("<table border='2px'><tr><td><b>n</b>");
+                for(var i=0; i<=9; i++){
+                    document.write("<td>");
+                    document.write(i);
+                    document.write("</td>");
+                }
+                document.write("</tr>");
+                document.write("<tr><td><b>n2</b>");
+                   for(var i=0; i<=9; i++){
+                    document.write("<td>");
+                    document.write(i*i);
+                    document.write("</td>");
+                }
+            document.write("</tr></table>");
+        </script>
+
+        <div onmouseover="this.style.background='yellow'" onmouseout="this.style.background='white'">
+            여기에 마우스를 올리면 배경색이 노란색으로 바뀝니다.
+        </div>
+
+        
+    </body>
+</html>

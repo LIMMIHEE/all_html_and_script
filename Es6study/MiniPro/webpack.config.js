@@ -19,7 +19,7 @@ module.exports = {
                          { "targets" : {
                             'browsers' : ["lasr 2 versions","ie 9"]
                             },
-                            "debug":true
+                            "debug": false
                         }]
                         ]
                     }

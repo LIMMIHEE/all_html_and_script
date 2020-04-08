@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CallBack, Object_Study</title>
+    </head>
+    <body>
+        콜 백이랑 오브젝트 공부
+    </body>
+    <script>
+        function print(a, b, fun) {
+            var num = a+b;
+            fun(num);
+        }
+
+        print("이건", " 테스트", function (A) {
+            console.log(A);
+        });
+
+        var person={
+            name:"망고",
+            Value:"비쌈"
+        };
+
+        console.log(person.name);
+        console.log(person["Value"]);
+        //console.log(person[Value]); 는 안됨!! 꼭 ""나 '' 붙여야함!!
+
+        var fruits = person;
+        console.log("fruits의 이름은 "+fruits.name);
+        
+        delete person;
+        console.log(person["Value"]);
+        // 이렇게 전체로 하면 삭제 안된다.
+
+        delete person["Value"];
+        console.log(person["Value"]);
+        // 각자 삭제해주면 삭제 됨!
+
+        person.Value = "싸지 않음";
+        console.log(person["Value"]);
+        // 이렇게 추가하는 것도 가능함!
+
+    </script>
+</html>

@@ -17,7 +17,7 @@
 //3.
 var vscope = 'global';
 function fscope() {
-    vscope = 'local';
+    vscope = 'local'; //var 없이 선언했을 때는 전역 변수로 됨.
     console.log(vscope);
 }
 fscope(); // local

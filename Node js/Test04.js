@@ -37,11 +37,14 @@ console.dir(grades)
 // //3. 생성자 함수 이용
 // //생성자 함수 : 객체를 만들면서 동시에 값을 넣어주는 것.
 // //보통 생성자 함수는 맨 앞을 대문자로 씀.
+// 자바 스크립트에서는 생성자 함수를 프로토 타입이라고 부른다.
 // function Grades(name,score){
 //     this.name=name;
 //     this.score=score;
 // }
-
+// Grades.prototype.walk=funtion(){
+//  console.log('걷다');    
+//}
 // Grades('kim',10);//함수 호출
 
 // const kim= new Grades('kim',10); //객체 생성

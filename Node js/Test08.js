@@ -62,7 +62,3 @@ console.log(users2);
 console.log(users);
 
 */
-
-function add(x,y){
-    console.log(x+y);
-}

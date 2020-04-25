@@ -17,6 +17,9 @@ user.show();
 */
 //... 일케 하면 안됌. 이름 겹쳐서 같은 걸로 인식해버림.
 
+
+//////////////////// 객체=------------------------
+
 const user = {
     name:['kim','lee','kang','park'],
     show: function () {
@@ -25,7 +28,7 @@ const user = {
         }
     }
 };
-user.show();
+//user.show();
 
 
 const users2 = new Object();
@@ -38,7 +41,7 @@ users2.show=function () {
         console.log(users2.name[value]);
     }
 }
-users2.show();
+//users2.show();
 
 function user3(name1,name2,name3,name4) {
     this.name=[name1,name2,name3,name4];
@@ -50,4 +53,24 @@ function user3(name1,name2,name3,name4) {
     
 }
 const users3=new user3('kim','lee','kang','park');
-users3.show();
+//users3.show();
+
+
+
+//////////////////// 배열=------------------------
+
+const user_ = [
+    {name:'kim',kor:80,eng:70,math:50},
+    {name:'lee',kor:60,eng:30,math:50},
+    {name:'kim',kor:80,eng:70,math:50}
+]
+user_.forEach(element => {
+    console.log("이름 : "+element.name+"\n"
+    +"국어 성적: "+element.kor+", 영어 성적: "+element.eng
+    +", 수학 성적: "+element.math+"\n");
+});
+
+
+
+
+

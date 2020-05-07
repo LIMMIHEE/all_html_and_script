@@ -21,22 +21,42 @@ const fs = require('fs');
 /******************************************* */
 
 
-console.log('A');
-const content = fs.readFileSync('./data.txt');
-//동기식 함수. ( 콜백 없음 )
-console.log(content.toString());
-//toString 안하면 버터값이 나오기 때문에 toString 해야한다.
-console.log('B')
-// A content 구조? B
+// console.log('A');
+// const content = fs.readFileSync('./data.txt');
+// //동기식 함수. ( 콜백 없음 )
+// console.log(content.toString());
+// //toString 안하면 버터값이 나오기 때문에 toString 해야한다.
+// console.log('B')
+// // A content 구조? B
 
+/******************************************* */
 
-
-console.log('A');
-fs.readFile('./data.txt',(err,result)=>{
-    if(err){console.log(err); return;    }
-    console.log(result);
-    console.log('B');
+// console.log('A');
+// fs.readFile('./data.txt',(err,result)=>{
+//     if(err){console.log(err); return;    }
+//     console.log(result);
+//     console.log('B');
     
-})
-//비동기식 함수. 
-console.log('C');
+// })
+// //비동기식 함수. 
+// console.log('C');
+
+
+/******************************************* */
+
+//writeFileSync, writeFile : overwrite
+
+//이어서 쓰는 메서느 appendFile()
+// const data = new Uint8Array(Buffer.from('Hello Node.js'));
+// console.log('A');
+// fs.writeFile('./data2',data,(err)=>{
+//         if(err){console.log(err); return;    }
+//         console.log('C');
+// });
+// console.log('B');
+
+const data = new Uint8Array(Buffer.from('Hello Node.js'));
+console.log('A');
+const test1 = fs.writeFileSync('./data2',data);
+
+console.log('B');

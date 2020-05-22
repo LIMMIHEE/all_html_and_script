@@ -1,6 +1,10 @@
 const express = require('express');
 const app = express();
 
+
+
+let time = Date();
+
 app.set('views','../views');
 //템플릿 파일이 저장될 디렉토리 지정
 app.set('view engine','pug');
@@ -24,7 +28,7 @@ app.get('/dynamic',(req,res)=>{
     for(let i=0; i<5; i++){
         list += "<li>coding</li>"
     }
-    let time = Date();
+    
  
     let output =`<!DOCTYPE html>     
     <html>
@@ -46,8 +50,13 @@ app.get('/dynamic',(req,res)=>{
 })
 
 app.get('/template',(req,res)=>{
-    res.render('Temp.pug');
+    res.render('Temp.pug',{
+        ti:time,
+        _title:'퍼그'
+    });
     //템플릿 파일을 보여줄때는 res 아래에 있는 렌더 함수를 사용한다.
+    //{} 안에는 퍼그 파일에 사용할 변수등을 전달한다.
+    //값은 키:값 과 같은 형식으로 넘긴다.
 })
 
 app.get('/login',(req,res)=>{

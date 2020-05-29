@@ -1,0 +1,12 @@
+doctype html
+html
+    head 
+        title Pug test
+
+    body
+        h1 Hello world
+        div = _time
+        //자바 스크립트는 하이픈 넣어서 한다
+        ul
+        -for(let i=0; i<5; i++)
+            li hello

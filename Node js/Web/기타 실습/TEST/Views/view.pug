@@ -3,8 +3,9 @@ html
     head
         title server
         script.
-            funtion Visi(){
-                document.getElementById("new").innerHTML="<html><head></head><body><h1>Server Side JavaScript</h1><form method='post' action='/subject/new'><input type='text' name='title' placeholder='title'><p></p><textarea name='desc' cols='30' rows='10' placeholder='into the text'></textarea><p></p><input type='submit' value='등록하기'></form></body></html>";
+            function Visi(){
+                document.getElementById("new").innerHTML="<form method='post' action='/subject/new'><input type='text' name='title' placeholder='title'><p></p><textarea name='desc' cols='30' rows='10' placeholder='into the text'></textarea><p></p><input type='submit' value='등록하기'></form>";
+            };
 
     body
         h1 Server Side JavaScript
@@ -18,6 +19,7 @@ html
 
         //p Welecome
         article=title
-        a(href="/subject/new"  id="new" onclick="Visi()") new 
+        div(id="new")
+            a(href="#" onclick="Visi();") new 
 
         

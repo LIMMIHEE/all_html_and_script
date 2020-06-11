@@ -56,7 +56,7 @@ app.post('/subject/new',(req,res)=>{
             
         }
         console.log('정상적으로 등록되었습니다');
-        res.redirect('/subject');
+        //res.redirect('/subject');
         //리다이렉션 시키는법
     })
 

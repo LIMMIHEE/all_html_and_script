@@ -1,0 +1,19 @@
+doctypehtml
+html   
+    head
+        title server
+    body
+        h1 Server Side Javasctipts
+
+        ul
+            each topic in docs
+                //li=topic
+                li 
+                    a(href="/data/"+topic)=topic
+                //변수 대입은 = 이다
+
+        //p Welecome
+        article=title
+        a(href="/subject/new") new 
+
+        

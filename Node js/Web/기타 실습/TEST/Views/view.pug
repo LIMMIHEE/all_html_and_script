@@ -2,18 +2,22 @@ doctypehtml
 html   
     head
         title server
+        script.
+            funtion Visi(){
+                document.getElementById("new").innerHTML="<html><head></head><body><h1>Server Side JavaScript</h1><form method='post' action='/subject/new'><input type='text' name='title' placeholder='title'><p></p><textarea name='desc' cols='30' rows='10' placeholder='into the text'></textarea><p></p><input type='submit' value='등록하기'></form></body></html>";
+
     body
-        h1 Server Side Javasctipts
+        h1 Server Side JavaScript
 
         ul
             each topic in docs
-                //li=topic
+                
                 li 
                     a(href="/data/"+topic)=topic
                 //변수 대입은 = 이다
 
         //p Welecome
         article=title
-        a(href="/subject/new") new 
+        a(href="/subject/new"  id="new" onclick="Visi()") new 
 
         

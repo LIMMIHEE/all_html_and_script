@@ -24,6 +24,7 @@ app.get('/sss/new',(req,res)=>{
     //퍼그는 render 사용한다.
 });
 app.post('/sss/new',(req,res)=>{
+    
     //req.body.title
 })
 app.listen(3000,(req,res)=>{

@@ -1,0 +1,26 @@
+doctypehtml
+html
+    head
+        link(rel="stylesheet", href="../public/style.css")
+    body
+
+        h1 회원가입
+
+        form(method ="post" action="/register")
+            p 아이디
+            input(type="text" name="id")
+            br
+            p 비밀번호
+            input(type="password" name ="pass")
+            br
+            p 이름
+            input(type="text" name="name")
+            br
+            p 이메일
+            input(type="email" name="mail")
+            br
+            p 전화번호
+            input(type="numbers" name="phoneCall")
+
+            br
+            input(type="submit", value="회원가입")

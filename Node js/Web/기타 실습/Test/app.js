@@ -56,8 +56,39 @@ app.post('/subject/new',(req,res)=>{
             
         }
         console.log('정상적으로 등록되었습니다');
-        //res.redirect('/subject');
+        res.redirect('/subject');
         //리다이렉션 시키는법
+    })
+
+})
+app.get('/subject/:id',(req,res)=>{
+    // 1. id값 가져오기
+    // 2. 내용 읽어오기
+    // 3. 렌더 시키기, ( 이때 결과 값을 념겨서 변수로 출력하기 )
+
+    //1.
+    const id = req.params.id;
+    //2.
+    fs.readdir('./data',(err,files)=>{
+        if(err){
+            console.log(err);
+        }else{
+            fs.readFile('./data/'+id,(err,data)=>{
+                if(err){
+                    console.log(err);
+                }else{
+                    console.log('정상적으로 읽어옴');
+                    //3.
+                    res.render('new',{
+                        docs:files,
+                        title:id,
+                        content:data
+                    })
+                }
+                
+            })
+        }
+        
     })
 
 })

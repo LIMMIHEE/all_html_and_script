@@ -5,14 +5,26 @@ html
   
     body
 
-        h1 Server Side JavaScript
+        a(href="/subject")
+            h1 Server Side JavaScript
 
-        form(method ="post" action="/subject/new")
-            input(type="text", name="title" placeholder="title")
-            p
-            textarea(name="desc", cols="30", rows="10" placeholder="into the text")
-            p
-            input(type="submit", value="등록하기")
+        ul
+            each topic in docs
+                
+                li 
+                    a(href="/subject/"+topic)=topic
+                //변수 대입은 = 이다
+
+
+        h1=title
+
+        p=content
+        //- form(method ="post" action="/subject/new")
+        //-     input(type="text", name="title" placeholder="title")
+        //-     p
+        //-     textarea(name="desc", cols="30", rows="10" placeholder="into the text")
+        //-     p
+        //-     input(type="submit", value="등록하기")
 
         
 

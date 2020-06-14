@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        <h2>this 활용</h2>
+        <hr>
+        
+        <input type="button" id="num" value="버튼 1" onclick="ch_button('우우','red','30px')">
+        <input type="button" id="num2" value="버튼 2" onclick="ch_button('우우2','green','40px')">
+        버튼 클릭하면 크기와 색 변경.
+        <script>
+        function ch_button(text,color,size){
+            var i="a";
+            if(text=="우우"){
+                i="num"
+            }else{
+                i="num2";
+            }
+            var input = document.getElementById(i);
+            input.style.color=color;
+            input.style.fontSize=size;
+             
+        }
+        </script>
+    </body>
+
+</html>

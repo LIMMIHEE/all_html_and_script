@@ -1,0 +1,5 @@
+body{background: green;}
+.left, .right { top:0; width:100px; height: 300px;}
+.left{background-color: aqua; left:0;position: static;}
+.right{background-color:rgb(255, 143, 218); right:0;position: static;}      
+.center{background-color: rgb(50, 128, 80); height: 300px; }  

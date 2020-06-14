@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        <h2>CSS 스타일 동적 변경</h2>
+        <hr>
+        <span style="color:blue">이것은 </span>
+        <span id="ch" style="color:red">문장입니다.</span>
+        <br>
+        <input type="button" onclick="ch_text()" value="스타일 변경">
+        <script>
+        function ch_text(){
+            var span = document.getElementById("ch");
+            span.style.color="green";
+            span.style.fontSize="35px";
+            span.style.border = "3px dotted magenta";
+        }
+        </script>
+    </body>
+
+</html>

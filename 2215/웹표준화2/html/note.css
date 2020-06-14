@@ -1,0 +1,7 @@
+body{background: sienna;}
+
+
+.left, .right {position: static; top:0; width:100px; height: 300px;}
+.left{background-color: aqua; left:0;}
+.right{background-color:rgb(255, 143, 218); right:0;}      
+.center{background-color: rgb(50, 128, 80); height: 300px; }  

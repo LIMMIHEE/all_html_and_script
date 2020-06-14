@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head><title></title>
+        <script>
+            function Keyevent(i){
+                var n =event.keyCode;
+                console.log("키값 : "+n);
+                console.log(String.fromCharCode(n));
+            }
+        </script>
+    </head>
+    <body>
+        <table border="3px solid black">
+            <tr>
+                <td>onKeyDown</td>
+                <td><input type="text>" onkeydown= "javascript:Keyevent(this);"></td>
+            </tr>
+            <tr>
+                <td>onKeyPUp</td>
+                <td><input type="text>" onkeyup= "javascript:Keyevent(this);"></td>
+            </tr>
+            <tr>
+                    <td>onKeyPress</td>
+                    <td><input type="text>" onkeypress= "javascript:Keyevent(this);"></td>
+                </tr>    
+        </table>
+    </body>
+</html>

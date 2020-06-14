@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>qwe</title>
+    </head>
+    <body>
+        <script>
+             i=1;
+             com_value=53;
+            function guess(){
+
+                if(i<6){
+                    var a= document.getElementById("num").value;
+                    a =parseInt(a);
+                    if(a==com_value){
+                        document.getElementById("min").value = i;
+                        document.getElementById("max").value = "정답입니다.";
+                    }else if(a>com_value){
+                        document.getElementById("min").value = i;
+                        document.getElementById("max").value = "w정답보다 큽니다.";
+                    }else{
+                        document.getElementById("min").value = i;
+                        document.getElementById("max").value = "w정답보다 작습니다.";
+                    }
+                    i++;
+                }else{
+                    document.getElementById("max").value = "5번 까지 도전 가능합니다";
+                }
+            }
+        </script>
+
+        <h2>숫자 맞추기</h2>
+
+        이게임은 컴퓨터가 생성한 숫자를 맞추는 게임입니다<br>
+        숫자는 1부터 100사이에 있습니다<br>
+        숫자: <input type="text" id="num"><input type="button" value="확인" id="ch" onclick="guess()"><br>
+        추측횟수 <input type="text" id="min"> 힌트 <input type="text" id="max">
+        
+    </body>
+</html>

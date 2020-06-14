@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            asd
+        </title>
+        <script>
+                function one(){
+                    num=1;
+                    while(true)
+                    {
+                        if(num<=3000){
+                            break;
+                        }
+                        i+=num;
+                        num++;
+                    }
+                    document.write(i);
+                }
+                function two(){
+                    var num;
+                    var i=1;
+                    while(i<=100){
+                        if(i%3==0){
+                            num+=i;
+                            i++;
+                        }else{
+                            i++;
+                            continue;
+                        }
+                    }
+                    document.write(num);
+                }
+                
+            </script>
+    </head>
+    <body>
+        <input type="button" value="1" onclick="one()">
+        <input type="button" value="2" onclick="two()">
+    </body>
+</html>

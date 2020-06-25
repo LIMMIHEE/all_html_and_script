@@ -1,0 +1,22 @@
+이름
+first_name
+부서번호
+department_id
+
+담당업무
+job_id
+
+입사일자
+hire_date
+
+보너스 비율 
+commission_pct
+
+사원번호
+employee_id
+
+핸드폰 번호 
+PHONE_NUMBER
+
+매니저 아이디
+MANAGER_ID

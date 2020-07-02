@@ -15,5 +15,4 @@ app.get('/',(req,res)=>{
 
 app.listen(3888,(req,res)=>{
     console.log('server conn');
-    
 })

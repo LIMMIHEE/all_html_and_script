@@ -21,7 +21,6 @@ MongoClient.connect(url,(err,client)=>{
         console.log("Mongo Conn node");
         db=client.db(dbname);
         //db 생성
-        client.
         login=client.collection('login');    
         //table 생성    
     }

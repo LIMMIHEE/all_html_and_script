@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>002</title>
+    </head>
+    <body>
+        <script>
+       
+            내구도 = [1, 2, 1, 4]
+            독 = [{
+                "이름" : "루비독",
+                "나이" : "95년생",
+                "점프력" : "3",
+                "몸무게" : "4",
+                },{
+                "이름" : "피치독",
+                "나이" : "95년생",
+                "점프력" : "3",
+                "몸무게" : "3",
+                },{
+                "이름" : "씨-독",
+                "나이" : "72년생",
+                "점프력" : "2",
+                "몸무게" : "1",
+                },{
+                "이름" : "코볼독",
+                "나이" : "59년생",
+                "점프력" : "1",
+                "몸무게" : "1",
+                },
+            ]
+
+
+            function cross_river(Stone,dog) {
+                var result=[];
+                dog.forEach(element => {
+                    let add=0;
+                    let TorF = false;
+                    while(add < Stone.length -1){
+                        add += parseInt(element.점프력,10);
+                        내구도[add-1] -= parseInt(element.몸무게,10);
+                        if(내구도[add-1] < 0){
+                            TorF = true;
+                            break;
+                        }
+                    }
+                    if(!TorF){
+                        result.push(element.이름);
+                    }
+                });
+
+                return result;
+            }
+
+
+            console.log(cross_river(내구도,독));
+            
+        </script>
+        
+    </body>
+</html>

@@ -42,9 +42,7 @@ const person = mongoose.Schema({
 //위에서 만든 스키마 구조(person)을 따라서 student 컬렉션을 만들겠다
 const student = mongoose.model('student', person);
 
-var _name;
-var _age ;
-var _addr;
+
 
 app.set("Views","./Views"); 
 app.set("view engine",'pug');
@@ -77,9 +75,48 @@ app.post('/new',(req,res)=>{
         }else{
             console.log('saves');
             //리다이렉션
-            res.redirect('/');
+            res.redirect('/list');
         }
     })
+})
+//목록보기
+app.get('/list',(err,res)=>{
+    student.find({},(err,result)=>{ //find({})는 모든걸 가져온다
+        if(err){
+            console.log(err);return;
+        }
+        res.render('list',{docs:result});// 
+        //변수 하나에 대입. ex) docs:result / 그리고 사용할때는 docs.어쩌구 처럼 사용하면 된다.
+        // 값을 넘기는 건 언제나 {}안에 넣기
+    })
+})
+//수정하기
+app.get('/edit',(req,res)=>{
+    res.render('update')  
+})
+app.post('/edit',(req,res)=>{
+    _name = req.body.name;
+    _age = req.body.age;
+    _addr = req.body.addr;
+
+    student.findOne({name:_name},(err,result)=>{//조건에 맞는 값 찾음
+        if(err){
+            console.log(err);return;
+        }
+        result.name = _name;
+        result.age = _age;
+        result.addr= _addr;
+
+
+        result.save((err,docs)=>{
+            if(err){
+                console.log(err);
+            }else{
+                console.log('Update');
+                res.redirect('/list');
+            }
+        })
+    });
 })
 
 

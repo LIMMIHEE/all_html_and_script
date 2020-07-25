@@ -1,0 +1,27 @@
+html
+    head
+        title
+    body
+        h1 미림마이스터고 채용설명회 참석
+
+        form( method="post", action="/apply")
+            p 회사명
+            input(type="text", name="name", placeholder="회사명")
+            br
+            p 참석인원
+            input(type="number", name="sum", placeholder="0")
+            br
+            p 대표참석자 성함
+            input(type="text", name="Representative")
+            br
+            p 직책
+            input(type="text", name="officialRepresentative")
+            br
+            p 전화번호
+            input(type="text", name="telnum")
+            br
+            p 이메일
+            input(type="text", name="email")
+            br
+            br
+            input(type="submit", value="신청하기")

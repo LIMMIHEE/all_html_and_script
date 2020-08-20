@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            TODO LIST
+        </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <style>
+            input:focus{
+                outline: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>TODO LIST</h1>
+            <p>Welcome to TODO</p>
+            <form method="post" action="/todo">
+                <input type="text" placeholder="새로운 할 일" name="content" onclick="this.value=''"/>
+                <input type="submit" class="btn-primary" value="추가"/>
+            </form>
+            <table class="table table-striped" style="margin: 20px 0 0 0;">
+                <thead>
+                    <tr>
+                        <td>#</td>
+                        <td>내용</td>
+                        <td>작성 날짜</td>
+                        <td>삭제</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(var i=0; i<docs.length; i++){ %>
+                        <tr>
+                            <td ><%= docs[i].id %></td>
+                            <td><%= docs[i].content %></td>
+                            <td><%= docs[i].wdate %></td>
+                            <!-- 깔끔한 URL을 시멘틱 URL이라고 한다 -->
+                            <td><form action="/delete/<%= docs[i].id %>" method="post"><input type="submit" class="btn" value="삭제" /></form></td>
+                            <td><a href="/edit/<%= docs[i].id %>">수정</a>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

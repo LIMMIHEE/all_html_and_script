@@ -31,6 +31,7 @@ app.use(bodyParser.urlencoded({
 let sql={
     insert:'insert into todo (content,wdate) values(?,?);',
     list:'select * from todo order by id desc',
+    edit:'select * from todo where id=?',
     update:'update todo set content=? where id=?',
     delete:'delete from todo where id=?'
 }
@@ -61,7 +62,24 @@ app.post('/delete/:id',(req,res)=>{
         res.redirect('/todo');
     })
 })
-
+app.get('/edit/:id',(req,res)=>{
+    const _id = req.params.id;
+    conn.query(sql.edit,[_id],(err,rows)=>{
+        if(err){console.log(err); return;}
+        res.render('editer',{docs:rows[0], id:_id})
+    })
+    //const _id = req.params.id;
+    //res.render('editer',{docs:_id})
+})
+app.post('/edit/:id',(req,res)=>{
+    const _content=req.body.content;
+    const _id = req.params.id;
+    conn.query(sql.update,[_content,_id],(err)=>{
+        if(err){console.log(err); return;}
+        console.log('Update!!');
+        res.redirect('/todo');
+    })
+})
 
 
 app.listen(3000,()=>{

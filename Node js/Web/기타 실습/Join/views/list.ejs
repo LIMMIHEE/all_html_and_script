@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            회원 LIST
+        </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+                
+        <style>
+            input:focus{
+                outline: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>회원 LIST</h1>
+            <table class="table table-striped" style="margin: 20px 0 0 0;">
+                <thead>
+                    <tr>
+                        <td>#</td>
+                        <td>아이디</td>
+                        <td>비밀번호</td>
+                        <td>유저 이름</td>
+                        <td>이메일</td>
+                        <td>전화 번호</td>
+                        <td>가입 일자</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(var i=0; i<docs.length; i++){ %>
+                        <tr>
+                            <td><%= docs[i].id %></td>
+                            <td><%= docs[i].user_id %></td>
+                            <td><%= docs[i].password %></td>
+                            <td><%= docs[i].username %></td>
+                            <td><%= docs[i].email %></td>
+                            <td><%= docs[i].tel %></td>
+                            <td><%= docs[i].regDate %></td>
+                            <td><a href="/edit/<%= docs[i].id %>">수정</a>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

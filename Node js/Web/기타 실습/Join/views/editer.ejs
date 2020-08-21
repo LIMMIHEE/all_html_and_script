@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            회원 수정
+        </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+                
+    </head>
+    <body>
+        <div>
+            <form method="post" action="/edit/<%= id %>">
+            <table class="table table-striped" style="margin: 20px 0 0 0;">
+                <thead>
+                    <tr>
+                        <td>아이디</td>
+                        <td>비밀번호</td>
+                        <td>유저 이름</td>
+                        <td>이메일</td>
+                        <td>전화 번호</td>
+                        <td>가입 일자</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" name="user_id" value="<%= docs.user_id %>" /></td>
+                        <td><input type="text" name="password" value="<%= docs.password %>" /></td>
+                        <td><input type="text" name="username" value="<%= docs.username %>" /></td>
+                        <td><input type="text" name="email" value="<%= docs.email %>" /></td>
+                        <td><input type="text" name="tel" value="<%= docs.tel %>" /></td>
+                        <td><input type="text" name="regDate" value="<%= docs.regDate %>" /></td>
+                        <td><input type="submit" class="btn" value="수정"/></a>
+                    </tr>
+                </tbody>
+            </table>
+            </form>
+        </div>
+    </body>
+</html>

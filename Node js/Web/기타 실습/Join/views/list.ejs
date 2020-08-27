@@ -42,6 +42,7 @@
                             <td><%= docs[i].tel %></td>
                             <td><%= docs[i].regDate %></td>
                             <td><a href="/edit/<%= docs[i].id %>">수정</a>
+                            <td><form action="/delete/<%= docs[i].id %>" method="post"><input type="submit" class="btn btn-danger" value="삭제" /></form>
                         </tr>
                     <% } %>
                 </tbody>

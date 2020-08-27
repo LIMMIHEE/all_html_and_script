@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            회원가입
+        </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+                
+        <style>
+            input:focus{
+                outline: none;
+            }
+            input{
+                margin: 10px;
+            }
+            .hero{
+                position:absolute; width:100px; height:100px; top:30%; left:50%; margin-top:-50px; margin-left:-50px;
+            }
+            button{
+                width:200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="hero" >
+                <form method="get" action="/list">
+                    <button type="submit" class="submit-btn" style="margin-bottom: 20px;">회원 리스트 화면으로 가기</button>
+                </form>
+                <form method="get" action="/SignUp">
+                    <button type="submit" class="submit-btn">회원 가입 화면으로 가기</button>
+                </form>
+        </div>
+    </body>
+</html>

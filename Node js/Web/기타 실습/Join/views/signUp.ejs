@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            회원가입
+        </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+                
+        <style>
+            input:focus{
+                outline: none;
+            }
+            input{
+                margin: 10px;
+            }
+            .hero{
+                position:absolute; width:100px; height:100px; top:30%; left:50%; margin-top:-50px; margin-left:-50px;
+            }
+            button{
+                width:200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="hero" >
+            <div class="form-box">
+                <form method="post" action="/SingUp">
+                    <input type="text" class="input-field" placeholder="User Id" name="user_id" required>
+                    <br>
+                    <input type="password" class="input-field" placeholder="User password" name="password" required>
+                    <br>
+                    <input type="text" class="input-field" placeholder="User name" name="username" required>
+                    <br>
+                    <input type="email" class="input-field" placeholder="email" name="email" required>
+                    <br>
+                    <input type="tel" class="input-field" placeholder="tel" name="tel" required>
+                    <br>
+                    
+                    
+                    <button type="submit" class="submit-btn"> 가입하기</button>
+                </form>
+        </div>
+    </body>
+</html>

@@ -45,7 +45,7 @@ app.get('/edit/:id',(req,res)=>{
     const _id = req.params.id;
     conn.query(sql.edit,[_id],(err,rows)=>{
         if(err){console.log(err); return;}
-        res.render('editer',{docs:rows, id:_id});
+        res.render('editer',{docs:rows[0], id:_id});
     })
 })
 app.post('/edit/:id',(req,res)=>{

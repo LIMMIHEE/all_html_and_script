@@ -19,9 +19,10 @@
     <body>
         <div class="container">
             <h1>회원 LIST</h1>
+            <a href="/">메인화면으로 가기</a>
             <table class="table table-striped" style="margin: 20px 0 0 0;">
                 <thead>
-                    <tr>
+                    <tr style="font-weight: bold;">
                         <td>#</td>
                         <td>아이디</td>
                         <td>비밀번호</td>
@@ -34,7 +35,7 @@
                 <tbody>
                     <% for(var i=0; i<docs.length; i++){ %>
                         <tr>
-                            <td><%= docs[i].id %></td>
+                            <td style="font-weight: bold;"><%= docs[i].id %></td>
                             <td><%= docs[i].user_id %></td>
                             <td><%= docs[i].password %></td>
                             <td><%= docs[i].username %></td>

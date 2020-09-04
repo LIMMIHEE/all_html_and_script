@@ -51,7 +51,7 @@ app.get('/info/:id',(req,res)=>{
     const _data = req.params.id
     conn.query(sql.info,[_data],(err,rows)=>{
         if(err) console.log(err);
-        else res.render('info',{docs:rows})
+        else res.render('info',{docs:rows[0]})
     })
 })
 

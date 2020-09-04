@@ -1,7 +1,6 @@
 {
   "name": "3216",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +14,7 @@
     "moment": "^2.27.0",
     "moment-timezone": "^0.5.31",
     "mysql": "^2.18.1"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
